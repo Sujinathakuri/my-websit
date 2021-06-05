@@ -1,7 +1,9 @@
 body {
-    background-colors: brown;
+    background-color: brown;
 }
 
 .header {
     color: blue;
 }
+
+h1 {}
