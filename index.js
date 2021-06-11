@@ -8,6 +8,7 @@ const musicList = document.querySelector(".music-list");
 //Event Listeners
 
 musicButton.addEventListener('click', addMusic);
+musicList.addEventListener('click', deleteCheck)
 
 //Functions
 
@@ -18,12 +19,12 @@ function addMusic(event) {
     musicDiv.classList.add("music");
     //Create LI
     const newMusic = document.createElement('li');
-    newMusic.innerrText = 'album';
+    newMusic.innerrText = 'albumInput.value';
     newMusic.classList.add('music-item');
     musicDiv.appendChild(newMusic);
 
     //CHECK MARK BUTTON
-    cons completedButton = document.createElement('button');
+    const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class= "fas fa-check"></i>'
     completedButton.classList.add("completed-btn");
     musicDiv.appendChild(completedButton);
@@ -36,4 +37,7 @@ function addMusic(event) {
 
     //APPEND TO LIST
     musicList.appendChild(musicDiv);
+
+    //CLEAR TODO INPUT VALUE
+
 }
