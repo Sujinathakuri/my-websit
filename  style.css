@@ -5,11 +5,22 @@
 }
 
 body {
-    color: red;
+    background-image: red;
+    color: green;
+    font-family: "Poppins", sans-serif;
+    min-height: 150vh;
 }
 
-body {
-    background-color: rgb(0, 255, 200);
+header {
+    font-size: 1 rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .music-container {
