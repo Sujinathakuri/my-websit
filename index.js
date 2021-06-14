@@ -38,7 +38,7 @@ function addMusic(event) {
     //APPEND MUSIC LIST
     musicList.appendChild(musicDiv);
 
-    //CLEAR TODO INPUT VALUE
+    //CLEAR MUSIC INPUT VALUE
     musicInput.value = "";
 
 }
