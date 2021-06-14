@@ -8,7 +8,7 @@ const musicList = document.querySelector(".music-list");
 //Event Listeners
 
 musicButton.addEventListener('click', addMusic);
-musicList.addEventListener('click', deleteCheck)
+musicList.addEventListener('click', deleteCheck);
 
 //Functions
 
@@ -39,5 +39,15 @@ function addMusic(event) {
     musicList.appendChild(musicDiv);
 
     //CLEAR TODO INPUT VALUE
+    musicInput.value = "";
 
+}
+
+function deleteCheck(e) {
+    const item = e.target;
+
+    //DELETE MUSIC
+    if (item.classlist[0] === "transh- 'btn") {
+        item removed
+    }
 }
