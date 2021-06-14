@@ -19,7 +19,7 @@ function addMusic(event) {
     musicDiv.classList.add("music");
     //Create LI
     const newMusic = document.createElement('li');
-    newMusic.innerrText = 'albumInput.value';
+    newMusic.innerrText = 'song';
     newMusic.classList.add('music-item');
     musicDiv.appendChild(newMusic);
 
@@ -41,13 +41,4 @@ function addMusic(event) {
     //CLEAR TODO INPUT VALUE
     musicInput.value = "";
 
-}
-
-function deleteCheck(e) {
-    const item = e.target;
-
-    //DELETE MUSIC
-    if (item.classlist[0] === "transh- 'btn") {
-        item removed
-    }
 }
