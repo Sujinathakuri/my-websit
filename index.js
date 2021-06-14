@@ -35,7 +35,7 @@ function addMusic(event) {
     trashButton.classList.add("complete-btn");
     musicDiv.appendChild(trashButton);
 
-    //APPEND TO LIST
+    //APPEND MUSIC LIST
     musicList.appendChild(musicDiv);
 
     //CLEAR TODO INPUT VALUE
