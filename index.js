@@ -21,7 +21,7 @@ function addMusic(event) {
     musicDiv.classList.add("music");
     //Create LI
     const newMusic = document.createElement('li');
-    newMusic.innerrText = 'song';
+    newMusic.innerText = musicInput.value;
     newMusic.classList.add('music-item');
     musicDiv.appendChild(newMusic);
 
@@ -34,7 +34,7 @@ function addMusic(event) {
     //CHECK TRASH BUTTON
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashButton.classList.add("complete-btn");
+    trashButton.classList.add("trash-btn");
     musicDiv.appendChild(trashButton);
 
     //APPEND MUSIC LIST
