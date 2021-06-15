@@ -29,7 +29,7 @@ function addMusic(event) {
     completedButton.classList.add("completed-btn");
     musicDiv.appendChild(completedButton);
 
-    //CHECHA TRASH BUTTON
+    //CHECK TRASH BUTTON
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
     trashButton.classList.add("complete-btn");
