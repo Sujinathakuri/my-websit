@@ -3,12 +3,14 @@
 const musicInput = document.querySelector(".music-input");
 const musicButton = document.querySelector(".music-button");
 const musicList = document.querySelector(".music-list");
+const filterOption = document.querySelector(".filter.music")
 
 
 //Event Listeners
 
 musicButton.addEventListener('click', addMusic);
 musicList.addEventListener('click', deleteCheck);
+filterOption.addEventListener('click', filterTodo);
 
 //Functions
 
@@ -41,4 +43,48 @@ function addMusic(event) {
     //CLEAR MUSIC INPUT VALUE
     musicInput.value = "";
 
+
+}
+
+
+function deleteCheck(e) {
+    const item = e.target;
+
+    //DELETE MUSIC
+    if (item.classList[0] === "trash-btn") {
+        const music = item.parentElement;
+        music.classList.add('fall');
+        music.remove();
+    }
+
+    //CHECK MARK
+    if (item.classList[0] === "complete-btn") {
+        const music = item.parentElement;
+        music.classList.toggle("completed");
+    }
+}
+
+function filtermusic(e) {
+    const music = musicList.childNodes;
+    music.forEach(function(music) {
+        switch (e.target.value) {
+            case "all":
+                music.style.display = "flex";
+                break;
+            case "jazz":
+                if (music.classList.contains('jazz')) {
+                    music.style.display = 'flex';
+                } else {
+                    music.style.display = "none";
+                }
+                break;
+            case "rock":
+                if (!music.classList.contains("rock")) {
+                    music.style.display = 'flex';
+                } else {
+                    music.style.display = "none";
+                }
+                break;
+        }
+    });
 }
