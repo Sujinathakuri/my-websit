@@ -25,8 +25,6 @@ function addMusic(event) {
     newMusic.classList.add('music-item');
     musicDiv.appendChild(newMusic);
 
-    //ADD MUSIC TO LOCALSTORAGE
-    saveLocalMusics(music.Input.value);
 
     //CHECK MARK BUTTON
     const completedButton = document.createElement('button');
@@ -68,7 +66,7 @@ function deleteCheck(e) {
 }
 
 function filtermusic(e) {
-    const music = musicList.childNodes;
+    let music = musicList.childNodes;
     music.forEach(function(music) {
         switch (e.target.value) {
             case "all":
