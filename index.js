@@ -3,14 +3,14 @@
 const musicInput = document.querySelector(".music-input");
 const musicButton = document.querySelector(".music-button");
 const musicList = document.querySelector(".music-list");
-const filterOption = document.querySelector(".filter.music")
+const filterOption = document.querySelector(".filter.music");
 
 
 //Event Listeners
 
 musicButton.addEventListener('click', addMusic);
 musicList.addEventListener('click', deleteCheck);
-filterOption.addEventListener('click', filterTodo);
+filterOption.addEventListener('click', filtermusic);
 
 //Functions
 
@@ -24,6 +24,9 @@ function addMusic(event) {
     newMusic.innerText = musicInput.value;
     newMusic.classList.add('music-item');
     musicDiv.appendChild(newMusic);
+
+    //ADD MUSIC TO LOCALSTORAGE
+    saveLocalMusics(music.Input.value);
 
     //CHECK MARK BUTTON
     const completedButton = document.createElement('button');
@@ -87,4 +90,17 @@ function filtermusic(e) {
                 break;
         }
     });
+}
+
+
+function saveLocalMusics(music) {
+    //CHECK-- HEY DO I ALREADY HAVE THINGS IN THERE?
+    let musics;
+    if (localStorage.getItem("musics") === null) {
+        musics = [];
+    } else {
+        musics = JSON.parse(localStorage.getItem("music"));
+    }
+    musics.push(music);
+    localStorage.setItem("musics", JSON.stringify(musics));
 }
