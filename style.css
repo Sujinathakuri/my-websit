@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: rgb(211, 211, 167);
+    background: rgb(187, 117, 77);
     color: green;
     font-family: "Poppins", sans-serif;
     min-height: 150vh;
@@ -43,8 +43,8 @@ form button {
 
 .music {
     margin: 0.2rem;
-    background: rgb(226, 178, 226);
-    color: black;
+    background: rgb(154, 135, 221);
+    color: rgb(40, 29, 194);
     font-size: 1 rem;
     display: flex;
     justify-content: space-between;
@@ -70,4 +70,9 @@ form button {
     padding: 0.5rem;
     cursor: pointer;
     font-size: 1 rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
 }

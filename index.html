@@ -39,13 +39,12 @@
 
 
     <script src="index.js">
-        const api_url = 'https://alexanderbrandon.bandcamp.com/track/sunrise-on-vanaar'
-        async function getISS() {
-            const response = await fetch(api_url);
-            const data = await response.json();
-            console.log(data);
-        }
-        getISS();
+        fetctch("https://openwhyd.org/adrien?format=json%20returns%20the%20last%2020%20tracks%20Adrien")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.sentence)
+                document.querySelector("#debug").innerText = data.sentence
+            })
     </script>
 
 
