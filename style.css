@@ -76,3 +76,8 @@ form button {
 .fa-check {
     pointer-events: none;
 }
+
+.fall {
+    transform: translateY(7rem) rotateZ(20deg);
+    capacity: 0;
+}
