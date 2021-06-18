@@ -72,15 +72,15 @@ function filtermusic(e) {
             case "all":
                 music.style.display = "flex";
                 break;
-            case "jazz":
-                if (music.classList.contains('jazz')) {
+            case "completed song":
+                if (music.classList.contains('completed song')) {
                     music.style.display = 'flex';
                 } else {
                     music.style.display = "none";
                 }
                 break;
-            case "rock":
-                if (!music.classList.contains("rock")) {
+            case "uncompleted song":
+                if (!music.classList.contains("uncompleted song")) {
                     music.style.display = 'flex';
                 } else {
                     music.style.display = "none";
